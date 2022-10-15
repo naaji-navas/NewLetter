@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const request = require("request");
 const https = require("https");
 
-app.listen(3000, () => {
+app.listen(3000 || process.env.PORT, () => {
   console.log("Server is running on port 3000");
 });
 
@@ -33,7 +33,7 @@ app.post("/", (req, res) => {
   const url = "https://us10.api.mailchimp.com/3.0/lists/58d3efff49";
   const options = {
     method: "POST",
-    auth: "naji:238a41389ddd0b4d904165b9b6fead9d-us10",
+    auth: "naji:65626881f3c6b9c42b6ea1d01380455b-us10",
   };
 
   const request = https.request(url, options, (response) => {
